@@ -7,14 +7,14 @@
 Return wraps the error to be returned to the caller.
 
 ```go
-func f(id string) (rerr error) {
+func Get(id string) (_ int, rerr error) {
 	defer terrors.Return(&rerr, func(err error) error {
-		return errors.Errorf("f(%q)", err, id)
+		return 0, errors.Errorf("f(%q)", err, id)
 	})
 	
 	// ...
 	
-	return nil
+	return 100, nil
 }
 ```
 
