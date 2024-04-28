@@ -18,6 +18,8 @@ func Get(id string) (_ int, rerr error) {
 }
 ```
 
+terrors.Return is based on [derrors.Wrap](https://cs.opensource.google/go/x/pkgsite/+/master:internal/derrors/derrors.go;l=240).
+
 <!-- links -->
 [gopkg]: https://pkg.go.dev/github.com/tenntenn/terrors
 [gopkg-badge]: https://pkg.go.dev/badge/github.com/tenntenn/terrors?status.svg
