@@ -9,7 +9,7 @@ Return wraps the error to be returned to the caller.
 ```go
 func Get(id string) (_ int, rerr error) {
 	defer terrors.Return(&rerr, func(err error) error {
-		return 0, errors.Errorf("f(%q): %w", id, err)
+		return 0, errors.Errorf("Get(%q): %w", id, err)
 	})
 	
 	// ...
