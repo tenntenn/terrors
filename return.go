@@ -6,7 +6,7 @@ package terrors
 //
 //	func Get(id string) (_ int, rerr error) {
 //		defer terrors.Return(&rerr, func(err error) error {
-//			return 0, errors.Errorf("Get(%q):%w", id, err)
+//			return errors.Errorf("Get(%q):%w", id, err)
 //		})
 //		
 //		// ...
